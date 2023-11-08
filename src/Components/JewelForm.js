@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { FloatingLabel } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
-import Button from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 
 function JewelForm() {
@@ -12,6 +12,17 @@ function JewelForm() {
         material:'',
         price:''
     })
+
+    const handleInput = (e)=>{
+        const { name, value } = e.target;
+        setInput({
+          ...input,
+          [name]: value
+        });
+
+    }
+
+
   return (
     <div>
         <div>
@@ -20,33 +31,38 @@ function JewelForm() {
              <Form.Control type="text"
              name='name'
              onChange={handleInput}
+             value={input.name}
              placeholder="Name" />
             </FloatingLabel>
             <FloatingLabel label="Image Url" className='mb-5'>
              <Form.Control type="text"
              name='image'
              onChange={handleInput}
+             value={input.image}
              placeholder="ImageUrl" />
             </FloatingLabel>
             <FloatingLabel  label="Description" className='mb-5'>
              <Form.Control type="text"
              name='description' 
              onChange={handleInput}
+             value={input.description}
              placeholder="Category" />
             </FloatingLabel>
             <FloatingLabel  label="Material" className='mb-5'>
              <Form.Control type="text"
              name='material'
              onChange={handleInput} 
+             value={input.material}
              placeholder="Material" />
             </FloatingLabel>
             <FloatingLabel  label="Price" className='mb-5'>
              <Form.Control type="text"
              name='price' 
              onChange={handleInput}
+             value={input.price}
              placeholder="Price" />
             </FloatingLabel>
-            <Button variant="secondary">Add Jewelry</Button>
+            <Button variant="secondary" onClick={addJewelry}>Add Jewelry</Button>
                
 
             </div>
