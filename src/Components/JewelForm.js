@@ -22,6 +22,13 @@ function JewelForm() {
 
     }
 
+    function addJewelry(e){
+        e.preventDefault();
+        console.log("add jewelry")
+
+
+    }
+
 
   return (
     <div>
