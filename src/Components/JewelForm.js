@@ -5,6 +5,13 @@ import Button from 'react-bootstrap';
 
 
 function JewelForm() {
+    const[input, setInput]= useState({
+        name:'',
+        image:'',
+        description:'',
+        material:'',
+        price:''
+    })
   return (
     <div>
         <div>
@@ -12,6 +19,7 @@ function JewelForm() {
             <FloatingLabel label="Name" className='mb-5'>
              <Form.Control type="text"
              name='name'
+             
              placeholder="Name" />
             </FloatingLabel>
             <FloatingLabel label="Image Url" className='mb-5'>
