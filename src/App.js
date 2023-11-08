@@ -2,6 +2,7 @@ import './App.css';
 import React,{useState,useEffect} from 'react';
 
 function App() {
+  const[jewelry, setJewelry] = useState([])
   
   useEffect(() => {
     fetch("http://localhost:3000/jewelry")
