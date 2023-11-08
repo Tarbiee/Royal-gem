@@ -1,5 +1,6 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
+import JewelCard from './Components/JewelCard';
 
 function App() {
   const[jewelry, setJewelry] = useState([])
@@ -7,12 +8,14 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/jewelry")
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => setJewelry(data))
   },[])
 
 
   return (
     <div className="App">
+      <JewelCard/>
+
       
     </div>
   );
