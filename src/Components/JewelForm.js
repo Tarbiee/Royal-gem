@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 
 
-function JewelForm() {
+function JewelForm({handleAddJewel}) {
     const[input, setInput]= useState({
         name:'',
         image:'',
@@ -24,8 +24,30 @@ function JewelForm() {
 
     function addJewelry(e){
         e.preventDefault();
-        console.log("add jewelry")
+        const item ={
+            name: input.name,
+            image: input.image,
+            description: input.description,
+            material: input.material,
+            price: input.price,
+        };
+        fetch("http://localhost:3000/jewelry",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(item),
+        })
+        .then((r) => r.json())
+        .then((newJewelry) => handleAddJewel(newJewelry))
+        setInput({
+            name:'',
+            image:'',
+            description:'',
+            material:'',
+            price:''
 
+        })
 
     }
 
