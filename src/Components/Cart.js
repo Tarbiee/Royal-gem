@@ -3,7 +3,9 @@ import { Table } from 'react-bootstrap';
 
 
 function Cart({cartItem}) {
-   
+    const calculateSubtotal = (item) => item.price * item.quantity;
+
+    const total = cartItem.reduce((acc, item) => acc + calculateSubtotal(item), 0);
   return (
     <div>
         
