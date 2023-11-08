@@ -19,27 +19,31 @@ function JewelForm() {
             <FloatingLabel label="Name" className='mb-5'>
              <Form.Control type="text"
              name='name'
-             
+             onChange={handleInput}
              placeholder="Name" />
             </FloatingLabel>
             <FloatingLabel label="Image Url" className='mb-5'>
              <Form.Control type="text"
              name='image'
+             onChange={handleInput}
              placeholder="ImageUrl" />
             </FloatingLabel>
             <FloatingLabel  label="Description" className='mb-5'>
              <Form.Control type="text"
              name='description' 
+             onChange={handleInput}
              placeholder="Category" />
             </FloatingLabel>
             <FloatingLabel  label="Material" className='mb-5'>
              <Form.Control type="text"
-             name='material' 
+             name='material'
+             onChange={handleInput} 
              placeholder="Material" />
             </FloatingLabel>
             <FloatingLabel  label="Price" className='mb-5'>
              <Form.Control type="text"
              name='price' 
+             onChange={handleInput}
              placeholder="Price" />
             </FloatingLabel>
             <Button variant="secondary">Add Jewelry</Button>
