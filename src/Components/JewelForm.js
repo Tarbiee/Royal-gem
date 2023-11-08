@@ -1,6 +1,7 @@
-import React from 'react';
-import { FloatingLabel } from 'react-bootstrap/FloatingLabel';
-import { Form } from 'react-bootstrap/Form';
+import React,{useState} from 'react';
+import { FloatingLabel } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import Button from 'react-bootstrap';
 
 
 function JewelForm() {

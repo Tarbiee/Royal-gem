@@ -1,6 +1,7 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
 import JewelCard from './Components/JewelCard';
+import JewelForm from './Components/JewelForm';
 
 function App() {
   const[jewelry, setJewelry] = useState([])
@@ -15,6 +16,8 @@ function App() {
   return (
     <div className="App">
       <br></br>
+      <JewelForm/>
+      
       <br></br>
       <JewelCard jewelry={jewelry}/>
 
