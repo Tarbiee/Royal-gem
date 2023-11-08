@@ -1,7 +1,8 @@
 import './App.css';
-import React,{useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 
 function App() {
+  
   useEffect(() => {
     fetch("http://localhost:3000/jewelry")
     .then((res) => res.json())
