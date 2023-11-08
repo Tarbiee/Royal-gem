@@ -4,10 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-function JewelCard({ jewelry }) {
+
+function JewelCard({ jewelry , addToCart}) {
+
+    
     
   return (
-    <Container style={{padding: 'irem'}}> 
+    <Container style={{padding: 'irem'}}>
         <Row >
       {jewelry.map((jewel) => (
         <Col key={jewel.id} xs={6} sm={6} md={3} lg={3}>
@@ -19,7 +22,7 @@ function JewelCard({ jewelry }) {
               <Card.Text>{jewel.material}</Card.Text>
               <Card.Text>{jewel.price}</Card.Text>
              </Card.Body>
-            <span title='Add-to-cart' onClick={() => addToCart(jewel.id)} >
+            <span title='Add-to-cart' onClick={() => addToCart(jewel)} >
               <FontAwesomeIcon icon={faCartShopping} style={{marginBottom: '1rem'}}/>
               </span>
           </Card>
