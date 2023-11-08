@@ -19,7 +19,7 @@ function JewelCard({ jewelry }) {
               <Card.Text>{jewel.material}</Card.Text>
               <Card.Text>{jewel.price}</Card.Text>
              </Card.Body>
-            <span title='Add-to-cart' >
+            <span title='Add-to-cart' onClick={() => addToCart(jewel.id)} >
               <FontAwesomeIcon icon={faCartShopping} style={{marginBottom: '1rem'}}/>
               </span>
           </Card>
