@@ -9,7 +9,25 @@ function App() {
   const[cartItem, setCartItem]= useState([]);
 
     function addToCart(jewel){
-        setCartItem([...cartItem, jewel])
+      // Check if the item is already in the cart
+
+      const existingItem = cartItem.find((item) => item.item.id === jewel.id )
+
+      if(existingItem){
+        existingItem.quantity += 1;
+        setCartItem([...cartItem])
+      }
+      else{
+        const newItem ={
+      item: jewel,
+      quantity: 1,
+      name: jewel.name,
+      image: jewel.image,
+      price: jewel.price,
+          };
+        setCartItem([...cartItem, newItem])
+      }
+       
     }
   
   useEffect(() => {
