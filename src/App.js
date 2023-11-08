@@ -12,11 +12,19 @@ function App() {
     .then((data) => setJewelry(data))
   },[])
 
+  function handleAddJewel(newJewelry){
+    setJewelry([...jewelry, newJewelry])
+  }
+
+
+
+
+
 
   return (
     <div className="App">
       <br></br>
-      <JewelForm/>
+      <JewelForm handleAddJewel={handleAddJewel}/>
       
       <br></br>
       <JewelCard jewelry={jewelry}/>
