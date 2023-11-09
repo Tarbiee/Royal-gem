@@ -43,6 +43,13 @@ function App() {
     setJewelry([...jewelry, newJewelry])
   }
 
+  function handleDelete(item){
+    const jewel = cartItem.filter(jewell => jewell.id !== item)
+    setCartItem(jewel)
+
+  }
+
+
   return (
     <div className="App">
       <NavBar/>
@@ -50,7 +57,7 @@ function App() {
        <Route path="/" element={<Home/>}/>
       <Route path="/jewelForm" element={<JewelForm handleAddJewel={handleAddJewel}/>}/>
       <Route path="/jewelCard" element={<JewelCard jewelry={jewelry} addToCart={addToCart}/>}/>
-      <Route path="/cart" element={<Cart cartItem={cartItem}/>}/>
+      <Route path="/cart" element={<Cart cartItem={cartItem} handleDelete={handleDelete}/>}/>
       </Routes>
       <Footer/>
     </div>
