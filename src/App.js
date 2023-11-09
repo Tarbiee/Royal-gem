@@ -4,6 +4,7 @@ import JewelCard from './Components/JewelCard';
 import JewelForm from './Components/JewelForm';
 import Cart from './Components/Cart';
 import NavBar from './Components/NavBar';
+import Home from './Components/Home';
 
 function App() {
   const[jewelry, setJewelry] = useState([])
@@ -49,6 +50,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      <br></br>
+      <Home/>
 
       <br></br>
       <JewelForm handleAddJewel={handleAddJewel}/>
