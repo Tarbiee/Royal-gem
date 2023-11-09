@@ -38,7 +38,7 @@ function Cart({cartItem}) {
           <td>{item.quantity}</td>
           <td>{item.price}</td>
           <td>{item.price*item.quantity}</td>
-            <td>
+            <td onClick={() => handleDelete(item.id)}>
             <FontAwesomeIcon icon={faTrashCan}/>
             </td>
           
