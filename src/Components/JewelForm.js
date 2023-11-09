@@ -60,7 +60,9 @@ function JewelForm({handleAddJewel}) {
         <div>
             <br></br>
             <br></br>
-            <div className='form'>
+            <div className='form' style={{border:"solid",borderRadius:"50px", backgroundColor:"#EACCAD"}}>
+                <br></br>
+                <br></br>
             <FloatingLabel label="Name" className='mb-5'>
              <Form.Control type="text"
              name='name'
@@ -96,15 +98,14 @@ function JewelForm({handleAddJewel}) {
              value={input.price}
              placeholder="Price" />
             </FloatingLabel>
-            <Button variant="secondary" onClick={addJewelry}>Add Jewelry</Button>
-               
-
+            <Button variant="secondary" style={{backgroundColor:"#280003", marginBottom:"50px"}} onClick={addJewelry}>Add Jewelry</Button>
             </div>
+            <br></br>
          </div>
-        
-      
+         <br></br>
+         <br></br>
     </div>
-  )
+  );
 }
 
 export default JewelForm;

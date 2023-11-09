@@ -48,7 +48,7 @@ function JewelCard({ jewelry , addToCart}) {
               <Card.Text style={{fontSize:"13px"}}>{jewel.price}</Card.Text>
              </Card.Body>
             <span title='Add-to-cart' onClick={() => handleAddToCart(jewel)} >
-              <FontAwesomeIcon icon={faCartShopping} style={{marginBottom: '1rem'}}/>
+              <FontAwesomeIcon icon={faCartShopping} style={{marginBottom: '1rem',color: "#280003"}}/>
               </span>
           </Card>
         </Col>

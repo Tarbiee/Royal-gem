@@ -51,7 +51,7 @@ function Cart({cartItem, handleDelete, total,handlePurchase}) {
             <td>Total Price</td>
             <td>{total}</td>
             <td colSpan="2">
-                <Button variant="success" className="float-end" onClick={handlePurchase}>
+                <Button variant="success" style={{backgroundColor:"#280003"}}className="float-end" onClick={handlePurchase}>
                   Purchase
                 </Button>
               </td>
