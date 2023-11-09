@@ -7,13 +7,8 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import {Button} from 'react-bootstrap';
 
 
-function Cart({cartItem, handleDelete}) {
-    const calculateSubtotal = (item) => item.price * item.quantity;
-    const total = cartItem.reduce((acc, item) => acc + calculateSubtotal(item), 0);
-
-    
-
-
+function Cart({cartItem, handleDelete, total,handlePurchase}) {
+     
   return (
     <Container style={{padding: 'irem'}}>
     <div>

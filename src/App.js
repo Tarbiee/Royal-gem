@@ -12,6 +12,15 @@ function App() {
   const[jewelry, setJewelry] = useState([])
   const[cartItem, setCartItem]= useState([]);
 
+  const calculateSubtotal = (item) => item.price * item.quantity;
+  const total = cartItem.reduce((acc, item) => acc + calculateSubtotal(item), 0);
+
+  function handlePurchase(e){
+    e.preventDefault();
+    alert(`Thank you for your purchase! Total amount: $${total.toFixed(2)}`);
+    setCartItem([])
+  }
+
     function addToCart(jewel){
       // Check if the item is already in the cart
       const existingItem = cartItem.find((item) => item.item.id === jewel.id )
@@ -57,7 +66,7 @@ function App() {
        <Route path="/" element={<Home/>}/>
       <Route path="/jewelForm" element={<JewelForm handleAddJewel={handleAddJewel}/>}/>
       <Route path="/jewelCard" element={<JewelCard jewelry={jewelry} addToCart={addToCart}/>}/>
-      <Route path="/cart" element={<Cart cartItem={cartItem} handleDelete={handleDelete}/>}/>
+      <Route path="/cart" element={<Cart cartItem={cartItem} handleDelete={handleDelete} handlePurchase={handlePurchase} total={total}/>}/>
       </Routes>
       <Footer/>
     </div>
