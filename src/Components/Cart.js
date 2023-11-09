@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 
 function Cart({cartItem}) {
@@ -7,9 +8,9 @@ function Cart({cartItem}) {
 
     const total = cartItem.reduce((acc, item) => acc + calculateSubtotal(item), 0);
   return (
+    <Container style={{padding: 'irem'}}>
     <div>
-        
-        <Table striped bordered hover>
+      <Table striped bordered hover>
       <thead>
         <tr>
           <th>#</th>
@@ -48,6 +49,7 @@ function Cart({cartItem}) {
         
       
     </div>
+    </Container>
   )
 }
 

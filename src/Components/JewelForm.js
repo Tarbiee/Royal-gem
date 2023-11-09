@@ -95,7 +95,7 @@ function JewelForm({handleAddJewel}) {
                
 
             </div>
-            </div>
+         </div>
         
       
     </div>
