@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { FloatingLabel } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
+import {useNavigate} from 'react-router-dom';
 
 
 function JewelForm({handleAddJewel}) {
@@ -11,7 +12,8 @@ function JewelForm({handleAddJewel}) {
         description:'',
         material:'',
         price:''
-    })
+    });
+    const navigate = useNavigate();
 
     const handleInput = (e)=>{
         const { name, value } = e.target;
@@ -47,7 +49,8 @@ function JewelForm({handleAddJewel}) {
             material:'',
             price:''
 
-        })
+        });
+        navigate('/jewelCard')
 
     }
 

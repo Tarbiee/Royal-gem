@@ -106,11 +106,19 @@
     },
     {
       "name": "Sapphire Earrings",
-      "image": "https://i.pinimg.com/736x/66/c1/41/66c1414e8107efc87f686bc4f8f1d9a4.jpg",
-      "description": "Gold .......",
+      "image": "https://www.levinsfinejewellery.co.uk/wp-content/uploads/2018/09/241000022.jpg",
+      "description": "Pay Check",
       "material": "gold",
       "price": "400",
       "id": 14
+    },
+    {
+      "name": "Sapphire Earrings",
+      "image": "https://www.levinsfinejewellery.co.uk/wp-content/uploads/2018/09/241000022.jpg",
+      "description": "Pay Check",
+      "material": "gold",
+      "price": "400",
+      "id": 15
     }
   ]
 }
