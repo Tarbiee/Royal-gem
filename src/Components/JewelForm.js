@@ -55,6 +55,8 @@ function JewelForm({handleAddJewel}) {
   return (
     <div>
         <div>
+            <br></br>
+            <br></br>
             <div className='form'>
             <FloatingLabel label="Name" className='mb-5'>
              <Form.Control type="text"

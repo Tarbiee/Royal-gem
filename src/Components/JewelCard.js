@@ -11,6 +11,8 @@ function JewelCard({ jewelry , addToCart}) {
     
   return (
     <Container style={{padding: 'irem'}}>
+      <br></br>
+      <br></br>
         <Row >
       {jewelry.map((jewel) => (
         <Col key={jewel.id} xs={6} sm={6} md={3} lg={3}>

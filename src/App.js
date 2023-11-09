@@ -5,6 +5,7 @@ import JewelForm from './Components/JewelForm';
 import Cart from './Components/Cart';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const[jewelry, setJewelry] = useState([])
@@ -42,27 +43,15 @@ function App() {
     setJewelry([...jewelry, newJewelry])
   }
 
-
-
-
-
-
   return (
     <div className="App">
       <NavBar/>
-      <br></br>
-      <Home/>
-
-      <br></br>
-      <JewelForm handleAddJewel={handleAddJewel}/>
-      
-      <br></br>
-      <JewelCard jewelry={jewelry} addToCart={addToCart}/>
-
-      <br></br>
-      <Cart cartItem={cartItem}/>
-
-      
+      <Routes>
+       <Route path="/" element={<Home/>}/>
+      <Route path="/jewelForm" element={<JewelForm handleAddJewel={handleAddJewel}/>}/>
+      <Route path="/jewelCard" element={<JewelCard jewelry={jewelry} addToCart={addToCart}/>}/>
+      <Route path="/cart" element={<Cart cartItem={cartItem}/>}/>
+      </Routes>
     </div>
   );
 }

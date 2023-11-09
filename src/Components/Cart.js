@@ -10,6 +10,8 @@ function Cart({cartItem}) {
   return (
     <Container style={{padding: 'irem'}}>
     <div>
+      <br></br>
+      <br></br>
       <Table striped bordered hover>
       <thead>
         <tr>

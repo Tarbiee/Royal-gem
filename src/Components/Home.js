@@ -3,10 +3,14 @@ import React from 'react'
 function Home() {
   return (
     <div>
-        <h1>Royal-Gem App</h1>
+        <div>
+            <h1>Royal-Gem</h1>
+
+
+        </div>
       
     </div>
   )
 }
 
-export default Home
+export default Home;
