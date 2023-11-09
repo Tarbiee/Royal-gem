@@ -5,6 +5,7 @@ import JewelForm from './Components/JewelForm';
 import Cart from './Components/Cart';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
+import Footer from './Components/Footer';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
       <Route path="/jewelCard" element={<JewelCard jewelry={jewelry} addToCart={addToCart}/>}/>
       <Route path="/cart" element={<Cart cartItem={cartItem}/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 
 function Cart({cartItem}) {
@@ -21,6 +24,8 @@ function Cart({cartItem}) {
           <th>Quantity</th>
           <th>Price</th>
           <th>Sub-Price</th>
+          <td>Action</td>
+          
           
         </tr>
       </thead>
@@ -33,6 +38,10 @@ function Cart({cartItem}) {
           <td>{item.quantity}</td>
           <td>{item.price}</td>
           <td>{item.price*item.quantity}</td>
+            <td>
+            <FontAwesomeIcon icon={faTrashCan}/>
+            </td>
+          
         </tr>
         ))}
         <tr>
