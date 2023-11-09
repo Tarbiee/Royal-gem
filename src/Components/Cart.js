@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import {Button} from 'react-bootstrap';
 
 
 function Cart({cartItem, handleDelete}) {
@@ -54,7 +55,13 @@ function Cart({cartItem, handleDelete}) {
             <td></td>
             <td>Total Price</td>
             <td>{total}</td>
+            <td colSpan="2">
+                <Button variant="success" className="float-end">
+                  Purchase
+                </Button>
+              </td>
         </tr>
+       
         
         
       </tbody>
