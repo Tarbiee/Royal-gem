@@ -13,7 +13,6 @@ function App() {
 
     function addToCart(jewel){
       // Check if the item is already in the cart
-
       const existingItem = cartItem.find((item) => item.item.id === jewel.id )
 
       if(existingItem){

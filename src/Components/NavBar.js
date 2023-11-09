@@ -10,7 +10,8 @@ function NavBar() {
   return (
     
       <div>
-      <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar style={{backgroundColor: "#280003"}} variant="dark">
+      {/* <Navbar bg="dark" data-bs-theme="dark"> */}
         <Container>
           <Navbar.Brand href="#home">Royal-Gem</Navbar.Brand>
           <Nav className="ml-auto">
