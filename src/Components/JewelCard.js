@@ -39,13 +39,13 @@ function JewelCard({ jewelry , addToCart}) {
               newJewelRef.current = ref;
             }
           }}
-          style={{ marginBottom: '1rem', height: '23rem' }}>
+          style={{ marginBottom: '1rem', height: '23rem' ,overflow:"hidden", borderRadius:"30px"}}>
             <Card.Img variant="top" src={jewel.image} style={{height: '9rem'}}/>
             <Card.Body>
-              <Card.Title>{jewel.name}</Card.Title>
-              <Card.Text>{jewel.description}</Card.Text>
-              <Card.Text>{jewel.material}</Card.Text>
-              <Card.Text>{jewel.price}</Card.Text>
+              <Card.Title style={{fontSize:"16px"}}>{jewel.name}</Card.Title>
+              <Card.Text style={{fontSize:"15px"}}>{jewel.description}</Card.Text>
+              <Card.Text style={{fontSize:"14px"}}>{jewel.material}</Card.Text>
+              <Card.Text style={{fontSize:"13px"}}>{jewel.price}</Card.Text>
              </Card.Body>
             <span title='Add-to-cart' onClick={() => handleAddToCart(jewel)} >
               <FontAwesomeIcon icon={faCartShopping} style={{marginBottom: '1rem'}}/>
