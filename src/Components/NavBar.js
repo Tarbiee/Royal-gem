@@ -16,8 +16,8 @@ function NavBar() {
           <Navbar.Brand href="#home">Royal-Gem</Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
-            <Nav.Link as={Link} to={"/jewelCard"}>Jewelry</Nav.Link>
             <Nav.Link as={Link} to={"/jewelForm"}>Add New</Nav.Link>
+            <Nav.Link as={Link} to={"/jewelCard"}>Jewelry</Nav.Link>
             <Nav.Link as={Link} to={"/cart"}>Cart</Nav.Link>
           </Nav>
         </Container>

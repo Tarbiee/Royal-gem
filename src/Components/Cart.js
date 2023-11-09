@@ -10,7 +10,7 @@ import {Button} from 'react-bootstrap';
 function Cart({cartItem, handleDelete, total,handlePurchase}) {
      
   return (
-    <Container style={{padding: 'irem'}}>
+    <Container style={{padding: 'irem', border:"solid", marginTop:"50px",borderRadius:"50px"}}>
     <div>
       <br></br>
       <br></br>
