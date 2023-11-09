@@ -9,8 +9,9 @@ import Footer from './Components/Footer';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const[jewelry, setJewelry] = useState([])
+  const[jewelry, setJewelry] = useState([]);
   const[cartItem, setCartItem]= useState([]);
+  const [search, setSearch]= useState("")
 
   const calculateSubtotal = (item) => item.price * item.quantity;
   const total = cartItem.reduce((acc, item) => acc + calculateSubtotal(item), 0);
@@ -43,10 +44,10 @@ function App() {
     }
   
   useEffect(() => {
-    fetch("http://localhost:3000/jewelry")
+    fetch(`http://localhost:3000/jewelry?q=${search}`)
     .then((res) => res.json())
     .then((data) => setJewelry(data))
-  },[])
+  },[search]);
 
   function handleAddJewel(newJewelry){
     setJewelry([...jewelry, newJewelry])
@@ -58,6 +59,10 @@ function App() {
 
   }
 
+  function handleSearch(e){
+    setSearch(e.target.value)
+  }
+
 
   return (
     <div className="App">
@@ -65,7 +70,7 @@ function App() {
       <Routes>
        <Route path="/" element={<Home/>}/>
       <Route path="/jewelForm" element={<JewelForm handleAddJewel={handleAddJewel}/>}/>
-      <Route path="/jewelCard" element={<JewelCard jewelry={jewelry} addToCart={addToCart}/>}/>
+      <Route path="/jewelCard" element={<JewelCard jewelry={jewelry} addToCart={addToCart} handleSearch={handleSearch}/>}/>
       <Route path="/cart" element={<Cart cartItem={cartItem} handleDelete={handleDelete} handlePurchase={handlePurchase} total={total}/>}/>
       </Routes>
       <Footer/>

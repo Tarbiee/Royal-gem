@@ -13,6 +13,8 @@ function Home() {
           alt="First slide"
         />
         <Carousel.Caption>
+          <h1 style={{position: 'absolute', top: '-150%', left: '50%', transform: 'translate(-50%, -50%)', color: '#280003', fontSize:"60px", fontStyle:"italic" }}>Royal-Gem</h1>
+          <p  style={{position: 'absolute', top: '-100%', left: '50%', transform: 'translate(-50%, -50%)', color: '#280003' }}>Adorn Yourself in Elegance!</p>
           <h5>Ruby products</h5>
           <p>Explore our stunning collection of Ruby products, each crafted with precision and elegance.</p>
         </Carousel.Caption>
@@ -24,6 +26,8 @@ function Home() {
           alt="Second slide"
         />
         <Carousel.Caption>
+        <h1 style={{position: 'absolute', top: '-150%', left: '50%', transform: 'translate(-50%, -50%)', color: '#280003', fontSize:"60px", fontStyle:"italic" }}>Royal-Gem</h1>
+        <p  style={{position: 'absolute', top: '-100%', left: '50%', transform: 'translate(-50%, -50%)', color: '#280003' }}>Adorn Yourself in Elegance!</p>
           <h5>Gold Products</h5>
           <p>Discover the richness of our Gold collection, designed to add glamour to your style.</p>
         </Carousel.Caption>
@@ -35,6 +39,8 @@ function Home() {
           alt="Third slide"
         />
         <Carousel.Caption>
+        <h1 style={{position: 'absolute', top: '-150%', left: '50%', transform: 'translate(-50%, -50%)', color: '#280003', fontSize:"60px", fontStyle:"italic" }}>Royal-Gem</h1>
+        <p  style={{position: 'absolute', top: '-100%', left: '50%', transform: 'translate(-50%, -50%)', color: '#280003' }}>Adorn Yourself in Elegance!</p>
           <h5>Pearl Products</h5>
           <p>Indulge in the timeless beauty of our Pearl collection, crafted to perfection for every occasion.</p>
         </Carousel.Caption>

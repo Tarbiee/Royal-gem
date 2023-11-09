@@ -3,10 +3,12 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+import {FloatingLabel} from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 
-function JewelCard({ jewelry , addToCart}) {
+function JewelCard({ jewelry , addToCart, handleSearch}) {
 
   const navigate = useNavigate();
   const newJewelRef = useRef(null);
@@ -27,8 +29,13 @@ function JewelCard({ jewelry , addToCart}) {
     
     
   return (
-    <Container style={{padding: 'irem'}}>
+    <Container style={{padding: '1rem'}}>
       <br></br>
+      <FloatingLabel controlId="floatingSearch" label="Search  away...">
+        <Form.Control type="search" 
+        onChange={handleSearch}
+        placeholder="Search away..." />
+      </FloatingLabel>
       <br></br>
         <Row >
       {jewelry.map((jewel) => (

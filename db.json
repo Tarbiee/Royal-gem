@@ -95,38 +95,7 @@
       "material": "Silver",
       "price": 180,
       "description": "Beautiful garnet earrings with a silver setting."
-    },
-    {
-      "name": "Sapphire Earrings",
-      "image": "https://www.levinsfinejewellery.co.uk/wp-content/uploads/2018/09/241000022.jpg",
-      "material": "gold",
-      "price": "400",
-      "description": "A timeless pearl necklace with a pearl pendant",
-      "id": 13
-    },
-    {
-      "name": "Sapphire Earrings",
-      "image": "https://www.levinsfinejewellery.co.uk/wp-content/uploads/2018/09/241000022.jpg",
-      "description": "Pay Check",
-      "material": "gold",
-      "price": "400",
-      "id": 14
-    },
-    {
-      "name": "Sapphire Earrings",
-      "image": "https://www.levinsfinejewellery.co.uk/wp-content/uploads/2018/09/241000022.jpg",
-      "description": "Pay Check",
-      "material": "gold",
-      "price": "400",
-      "id": 15
-    },
-    {
-      "name": "Sapphire Earrings",
-      "image": "https://www.levinsfinejewellery.co.uk/wp-content/uploads/2018/09/241000022.jpg",
-      "description": "Pay Check",
-      "material": "gold",
-      "price": "400",
-      "id": 16
+
     }
   ]
 }
